@@ -41,3 +41,7 @@
 | 32   | 로그아웃                             |                         |
 | 33   | 인증 체크                            |                         |
 | 34   | 인증 체크 2                          |                         |
+
+MongoDB 첫시작시 꼭 Current IP 확인하기!!
+
+[참고링크](https://github.com/qnrjs42/node-react-learn)
