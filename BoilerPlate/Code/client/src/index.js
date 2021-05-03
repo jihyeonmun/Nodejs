@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import {Provider} from 'react-redux';
+import 'antd/dist/antd.css';
+import { applyMiddleware, createStore } from 'redux';
+import promiseMiddleware from 'redux-promise';
+import ReduxThunk from 'redux-thunk';
 // ReactDOM.render(<div>hello</div>, document.getElementById('root'));
+import Reducer from './_reducers/index.js'
+const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk) (createStore)
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider>
+    store = {createStoreWithMiddleware(Reducer,
+        window.__REDUX_DEVTOOLS_EXTENTSION__&&
+        window.__REDUX_DEVTOOLS_EXTENSION__()
+      )}
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 ); //index.html 가보면 id = 'root'를 불러옴.
 
