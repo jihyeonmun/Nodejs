@@ -1,37 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const videoSchema = mongoose.Schema({
-    writer : {
-        type : Schema.Types.ObjectId,
-        ref:'User' //User 정보 긁어옴! 
+const subscriberSchema = mongoose.Schema({
+    userTo:{
+        type: Schema.Types.ObjectId,
+        ref:'User'
     },
-    title : {
-        type:String,
-        maxlength:40
-    },
-    description : {
-        type : String
-    },
-    privacy : {
-        type : Number
-    }, 
-    category : {
-        type : String
-    },
-    views : {
-        type : Number,
-        default: 0
-    },
-    duration : {
-        type : String
-    },
-    thumbnail : {
-        type : String
-    },
+    userFrom:{
+        type:Schema.Types.ObjectId,
+        ref:'User'
+    }
 }, {timestamps: true})
 
 
 
-const Video = mongoose.model('Video', videoSchema);
+const Subscriber = mongoose.model('Subsciber', subscriberSchema);
 
-module.exports = { Video }
+module.exports = { Subscriber }

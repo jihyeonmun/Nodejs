@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { Row, Col, List, Avatar } from 'antd';
 import Axios from 'axios';
 import SideVideo from './Sections/SideVideo';
-// import Subscribe from './Sections/Subscribe';
+import Subscribe from './Sections/Subscribe';
 // import Comment from './Sections/Comment';
-// import LikeDislikes from './Sections/LikeDislikes';
+import LikeDislikes from './Sections/LikeDisLikes';
 
 function VideoDetailPage(props) {
 
@@ -48,10 +48,8 @@ function VideoDetailPage(props) {
                     <div style={{ width: '100%', padding: '3rem 4rem'}} >
                         <video style={{ width: '100%' }} src={`http://localhost:5000/${VideoDetail.filePath}`} controls />
 
-                        <List.Item 
-                            // actions={[ <LikeDislikes video userId={localStorage.getItem('userId')} 
-                            // videoId={videoId} />, subscribeButton]}
-
+                        <List.Item
+                            actions={[<LikeDislikes video videoId={videoId} userId={localStorage.getItem('userId')}  />, <Subscribe userTo={VideoDetail.writer._id} userFrom={localStorage.getItem('userId')} />]}
                         >
                             <List.Item.Meta
                                 avatar={<Avatar src={VideoDetail.writer.image} />}
