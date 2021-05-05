@@ -7,12 +7,11 @@ const {Subscriber} = require("../models/Subscriber");
 //             Subscribe
 //=================================
 
-router.post('/uploadVideo', (req, res) => {
-    //비디오 정보들을 서버에 저장한다.
-    const video = new Video(req.body)
-    video.save((err, doc) => {
-        if(err) return res.json({ success: false, err})
-        res.status(200).json({ success: true })
+router.post('/subscribeNumber', (req, res) => {
+    Subscriber.find({ 'userTo':req.body.userTo})
+    .exec((err, subscribe) => {
+        if(err) return res.status(400).send(err);
+        return res.status(200).json({success:true, subscribeNumber : subscribe.length})
     })
 });
 
