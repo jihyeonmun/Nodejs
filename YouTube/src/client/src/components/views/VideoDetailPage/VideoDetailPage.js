@@ -40,7 +40,7 @@ function VideoDetailPage(props) {
 
     if(VideoDetail.writer) {
 
-        // const subscribeButton = VideoDetail.writer._id !== localStorage.getItem('userId') && <Subscribe userTo={VideoDetail.writer._id} userFrom={localStorage.getItem('userId')} />
+        const subscribeButton = VideoDetail.writer._id !== localStorage.getItem('userId') && <Subscribe userTo={VideoDetail.writer._id} userFrom={localStorage.getItem('userId')} />
 
         return (
             <Row gutter={[16, 16]}>

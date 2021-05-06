@@ -21,6 +21,9 @@
 | 좋아요 싫어요 기능 - 클릭시 기능들                |     |
 |                                                   |     |
 
+[참고 - 원본](https://github.com/jaewonhimnae/react-youtube-clone)
+[참고- 학생](https://github.com/wdh005/youtubeclonecoding)
+
 # 2강 전체적인 틀 만들고 Mongo DB 연결하기
 
 1. Boiler-plate 사용 이유
@@ -228,3 +231,22 @@ npm install fluent-ffmpeg
 3. 데이터베이스에서 얼마나 많은 사람이 비디오 업로드한 유저를 구독하는지 정보 가져오기
 4. 내가 이 비디오 업로드한 유저를 구독하는지 정보 가져오기
 5. 가져온 정보들 화면에 출력
+
+---
+
+# 12. 구독 기능 2
+
+1. 구독하기 기능 만들기 ( 0 Subscribe)
+2. 구독 취소하기 기능 만들기 ( 1 Subscribe )
+3. 아직 구독중이 아니라면 -> SUBSCRIBE!
+4. 이미 구독중이라면 -> UNSUBSCRIBE!
+
+---
+
+# 13. Subscription Page
+
+1. 빈 Subscription 페이지 생성
+2. Subscription Page를 위한 Route 만들기
+3. Template 만들기
+4. 내가 구독한 유저의 비디오들만 서버에서 가져오기
+5. 가져온 비디오 데이터들을 화면에 출력하기
