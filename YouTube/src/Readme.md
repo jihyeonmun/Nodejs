@@ -250,3 +250,46 @@ npm install fluent-ffmpeg
 3. Template 만들기
 4. 내가 구독한 유저의 비디오들만 서버에서 가져오기
 5. 가져온 비디오 데이터들을 화면에 출력하기
+
+---
+
+# 14. 댓글 만들기 ( 시스템 구조 설명)
+
+1. 댓글 부분 구조 설명
+
+- Writer
+- postId
+- responseTo
+- content
+
+2. Comment model 생성
+3. 디테일 비디오 페이지에 Comment Component 만들기
+
+![Comment](comment.png)
+
+> 댓글이 있고, 답글이 있는 것들을 구성해야 한다!
+
+---
+
+# 15. Comment.js
+
+1. Comment.js를 위한 template 만들기
+2. handleChange func 만들기
+3. OnSubmit func 만들기
+4. 저장된 댓글 데이터를 ParentComponenet로 업데이트하기
+5. 콘솔창에서 댓글 리스트들 확인.
+
+- SingleComment.js(props.refreshFunction)
+- Comment.js(props.refreshFunction)
+- DetailVideoPage.js(loadComments)
+  ![Comment](comment.png)
+
+---
+
+# 16. SingleCommnet
+
+1. Comment.js에다가 SingleComment Component를 생성
+2. Single Comment를 위한 Template 생성
+3. Open Reply func 와 handleChange func 만들기
+4. OnSubmit func 만들기
+5. 저장된 댓글을 ParentComponenet에다가 업데이트

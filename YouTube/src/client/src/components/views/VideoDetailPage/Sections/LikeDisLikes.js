@@ -142,8 +142,6 @@ function LikeDislikes(props) {
                 </Tooltip>
                 <span style={{ paddingLeft: '8px', cursor: 'auto' }}> {Dislikes} </span>
             </span>&nbsp;&nbsp;
-
-            
         </div>
     )
 }

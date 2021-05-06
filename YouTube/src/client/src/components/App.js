@@ -9,7 +9,6 @@ import NavBar from "./views/NavBar/NavBar";
 import Footer from "./views/Footer/Footer"
 import VideoUploadPage from "./views/VideoUploadPage/VideoUploadPage";
 import VideoDetailPage from "./views/VideoDetailPage/VideoDetailPage";
-import SubscriontionPage from "./views/SubscriptionPage/SubscriptionPage";
 import subscriptionPage from './views/SubscriptionPage/SubscriptionPage';
 
 
