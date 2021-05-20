@@ -31,9 +31,6 @@ function UploadProductPage(props) {
     const DescriptionChangeHandler = (event) => {
         setDescription(event.currentTarget.value)
     }
-    const ImageChangeHandler = (event) => {
-        setImages(event.currentTarget.value)
-    }
 
     const continentChangeHandler = (event) => {
         setContinent(event.currentTarget.value)
@@ -79,7 +76,7 @@ function UploadProductPage(props) {
             </div>
 
 
-            <Form>
+            <Form onSubmit={submitHandler}>
                 {/*DropZone */}
                 <FileUpload refreshFunction={updateImages}/>
                 
@@ -104,9 +101,9 @@ function UploadProductPage(props) {
                 </select>
                 <br />
                 <br />
-                <Button>
+                <button type="submit">
                     확인
-                </Button>
+                </button>
             </Form>
         </div>
     )

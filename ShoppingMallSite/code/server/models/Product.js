@@ -27,12 +27,16 @@ const productSchema = mongoose.Schema({
         maxLength : 100,
         default : 0
     },
+    continents : {
+        type: Number,
+        default : 1
+    },
     views : {
         type : Number,
         default : 0
     }
 })
 
-const Product = mongoose.model('Product', userSchema);
+const Product = mongoose.model('Product', productSchema);
 
 module.exports = { Product }
