@@ -64,7 +64,7 @@ router.post('/products', (req, res) => {
     for (let key in req.body.filters) {
         if (req.body.filters[key].length > 0) {
 
-            console.log('key', key)
+            console.log('key', key) //continents, prices 에 따라 연동됨!
 
             if (key === "price") {
                 findArgs[key] = {
@@ -83,7 +83,7 @@ router.post('/products', (req, res) => {
 
     if (term) {
         Product.find(findArgs)
-            .find({ $text: { $search: term } })
+            .find({ $text: { $search: term } })  //검색할떄 주로 쓰는 기능
             .populate("writer")
             .sort([[sortBy, order]])
             .skip(skip)
